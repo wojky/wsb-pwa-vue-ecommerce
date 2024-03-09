@@ -6,13 +6,19 @@ function toggleMobileMenu() {
     mobileMenu.value = !mobileMenu.value
 }
 
+
+const showOverlay = ref(false)
+const showHideOverlay = () => showOverlay.value = !showOverlay.value
+
 </script>
 
 <template>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <NuxtLink class="navbar-item" to="/">
-                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+                <img src="assets/logo.png" width="120" height="50">
             </NuxtLink>
 
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
@@ -26,24 +32,44 @@ function toggleMobileMenu() {
         <div id="navbarBasicExample" class="navbar-menu" :class="{ 'is-active': mobileMenu }">
             <div class="navbar-start">
                 <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
+                    <NuxtLink to="/" class="navbar-link">
                         Sklep
-                    </a>
+                    </NuxtLink>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item">
-                            About
-                        </a>
-                        <a class="navbar-item">
-                            Jobs
-                        </a>
-                        <a class="navbar-item">
-                            Contact
-                        </a>
-                        <hr class="navbar-divider">
-                        <a class="navbar-item">
-                            Report an issue
-                        </a>
+                        <NuxtLink to="/" class="navbar-item">
+                            KOLEKCJA
+                        </NuxtLink>
+                        <NuxtLink to="/" class="navbar-item">
+                            SUKIENKI|KOMBINEZONY
+                        </NuxtLink>
+                        <NuxtLink to="/" class="navbar-item">
+                            BLUZKI|KOSZULE
+                        </NuxtLink>
+                        <NuxtLink to="/" class="navbar-item">
+                            BLUZKI|KOSZULE
+                        </NuxtLink>
+                        <NuxtLink to="/" class="navbar-item">
+                            MARYNARKI
+                        </NuxtLink>
+                        <NuxtLink to="/" class="navbar-item">
+                            PŁASZCZE|KURTKI
+                        </NuxtLink>
+                        <NuxtLink to="/" class="navbar-item">
+                            SPODNIE
+                        </NuxtLink>
+                        <NuxtLink to="/" class="navbar-item">
+                            SPÓDNICE
+                        </NuxtLink>
+                        <NuxtLink to="/" class="navbar-item">
+                            SWETRY
+                        </NuxtLink>
+                        <NuxtLink to="/" class="navbar-item">
+                            GOLFY
+                        </NuxtLink>
+                        <NuxtLink to="/" class="navbar-item">
+                            RABAT 10%
+                        </NuxtLink>
                     </div>
                 </div>
 
@@ -71,19 +97,40 @@ function toggleMobileMenu() {
                     Nowości
                 </NuxtLink>
             </div>
-
             <div class="navbar-end">
                 <div class="navbar-item">
-                    <div class="buttons">
-                        <a class="button is-primary">
-                            <strong>Sign up</strong>
-                        </a>
-                        <a class="button is-light">
-                            Log in
-                        </a>
+                    <div class="language-dropdown">
+                        <select id="language">
+                            <option value="pl">PL</option>
+                            <option value="en">EN</option>
+                        </select>
                     </div>
+                    <NuxtLink to="" class="navbar-item">
+                        <img src="/assets/search.png" alt="Search" />
+                    </NuxtLink>
+                    <NuxtLink to="" class="navbar-item">
+                        <img src="/assets/person.png" alt="Profil" />
+                    </NuxtLink>
+                    <NuxtLink to="" class="navbar-item">
+                        <img src="/assets/hearth.png" alt="Ulubione" />
+                    </NuxtLink>
+                    <div class="separator"></div>
+
+                    <NuxtLink to="" class="navbar-item">
+                        <img src="/assets/shoppingBasket.png" @click="showHideOverlay" alt="Mój koszyk" />
+                    </NuxtLink>
                 </div>
             </div>
         </div>
     </nav>
+
+    <div v-show="showOverlay" class="overlay">
+        <div class="overlay-content">
+            <span style="color:black" @click="showHideOverlay" class="close">&times;</span>
+            <p class="overlayText">
+                Nie posiadasz produktów w koszyku.
+            </p>
+        </div>
+    </div>
+
 </template>
