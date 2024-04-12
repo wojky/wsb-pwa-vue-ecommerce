@@ -76,13 +76,4 @@
         </div>
 
     </footer>
-    <div class="bottom-bar">
-        <div class="copyright">
-            ©2023 CLICK FASHION. All rights reserved.
-        </div>
-        <img class="scroll-to-top" src="assets/arrowUp.png">
-        <div class="madeBy">
-            <a href="google.com">Proudly made by</a>
-        </div>
-    </div>
 </template>
