@@ -70,10 +70,6 @@
     border-radius: 5px;
 }
 
-.logo {
-    max-width: 50px; 
-}
-
 .madeBy{
     font-size: 12px;
 }
@@ -106,7 +102,7 @@
     background: rgba(0, 0, 0, 0.5); 
     z-index: 1000; 
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     color: white; 
   }
