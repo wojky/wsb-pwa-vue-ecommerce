@@ -22,3 +22,24 @@
       </form>
     </div>
   </template>
+  
+  <script>
+  export default {
+    data() {
+      return {
+        form: {
+          name: '',
+          email: '',
+          phone: '',
+          message: ''
+        }
+      }
+    },
+    methods: {
+      submitForm() {
+        // Handle form submission here
+        console.log(this.form)
+      }
+    }
+  }
+  </script>
