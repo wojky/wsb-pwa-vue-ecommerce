@@ -37,7 +37,6 @@
     },
     methods: {
       submitForm() {
-        // Handle form submission here
         console.log(this.form)
       }
     }
