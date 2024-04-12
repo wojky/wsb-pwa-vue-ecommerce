@@ -5,6 +5,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "dev-https": "nuxt dev --hostname 'localhost' --https",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -15,6 +16,8 @@
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
+    "@nuxtjs/pwa": "^3.3.5",
+    "json-server": "^1.0.0-alpha.23",
     "sass": "^1.71.1"
   }
 }

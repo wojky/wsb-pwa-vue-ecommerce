@@ -1,6 +1,7 @@
 <script setup>
-const message = 'siema'
-
+useHead({
+  link: [{ rel: "manifest", href: "/manifest.json" }],
+});
 </script>
 
 <template>
