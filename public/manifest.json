@@ -1,0 +1,21 @@
+{
+    "name": "Nazwa aplikacji",
+    "short_name": "aplikacja",
+    "theme_color": "#4DB882",
+    "background_color": "#FFFFFF",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "pwa.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "pwa_large.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
