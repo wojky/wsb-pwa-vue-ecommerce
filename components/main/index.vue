@@ -61,38 +61,62 @@ export default {
 </script>
 
 <style scoped lang="scss">
-// Stylizacja dla głównego baneraa
+/* Stylizacja dla głównego banera */
 .main-banner {
+  position: relative; /* Dodaj pozycję względną */
+  overflow: hidden; /* Ukryj elementy, które wychodzą poza obszar */
   background-image: url('banner.jpg');
   background-size: cover;
-  color: #fff;
+  background-position: center;
+  color: #000; /* Zmieniono kolor tekstu na czarny */
   text-align: center;
-  padding: 100px 0;
+  padding: 200px 0; /* Zwiększ padding dla większego banera */
 }
 
+/* Dodaj efekt animacji dla tytułu */
 .main-banner h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
-}
-
-.main-banner p {
-  font-size: 1.2em;
+  font-size: 5em; /* Zwiększ rozmiar czcionki */
   margin-bottom: 30px;
+  animation: fadeInUp 1s ease-out;
 }
 
+/* Dodaj efekt animacji dla opisu */
+.main-banner p {
+  font-size: 1.5em; /* Zwiększ rozmiar czcionki */
+  margin-bottom: 50px;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Dodaj animację do tekstu */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dodaj efekt dla przycisku */
 .main-banner .btn {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 15px 30px; /* Zwiększ rozmiar przycisku */
+  font-size: 1.2em; /* Zwiększ rozmiar czcionki przycisku */
   background-color: #ff5a5f;
   color: #fff;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 50px; /* Zaokrąglij kształt przycisku */
   transition: background-color 0.3s ease;
+  animation: fadeInUp 1s ease-out;
 }
 
+/* Dodaj efekt hover dla przycisku */
 .main-banner .btn:hover {
   background-color: #e0454d;
 }
+
 
 // Stylizacja dla sekcji z produktami
 .product-section {
@@ -174,7 +198,6 @@ export default {
 }
 
 // Stylizacja dla sekcji z promocjami
-/* Stylizacja dla sekcji z promocjami */
 .promotion-section {
   background-color: #f4f4f4;
   padding: 50px 0;
