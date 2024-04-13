@@ -56,7 +56,7 @@
 
 <script>
 export default {
-  name: 'MyComponent'
+  name: 'main'
 };
 </script>
 
