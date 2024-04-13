@@ -1,4 +1,4 @@
 <template>
-    <h3>YEYEYEYEY</h3>
+    <Main />
 </template>
 

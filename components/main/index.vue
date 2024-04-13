@@ -13,7 +13,7 @@
     <div class="product-list">
       <!-- Produkt 1 -->
       <div class="product">
-        <img src="asets/product1.png" alt="Product 1">
+        <img src="assets/product1.png" alt="Product 1">
         <h3>Product 1</h3>
         <p>Description of product 1</p>
         <a href="#" class="btn">View Details</a>
@@ -44,7 +44,7 @@
       </div>
       <!-- Promocja 2 -->
       <div class="promotion">
-        <img src="assets/promotion2.jpg" alt="Promotion 2">
+        <img src="assets/promotion2.png" alt="Promotion 2">
         <h3>Special Offer 2</h3>
         <p>Description of special offer 2</p>
         <a href="#" class="btn">Shop Now</a>
