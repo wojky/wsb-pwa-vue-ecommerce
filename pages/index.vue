@@ -4,13 +4,13 @@
 
 <script>
 // Import the component
-import MyComponent from 'wsb-pwa-vue-ecommerce\components\Content\main.vue';
+import main from '@/components/Content/main.vue';
 
 export default {
   name: 'index',
   components: {
     // Register the component locally s
-    'my-component': MyComponent
+    'my-component': main
   }
 };
 </script>
