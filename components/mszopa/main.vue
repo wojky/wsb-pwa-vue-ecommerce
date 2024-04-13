@@ -61,7 +61,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-// Stylizacja dla głównego banera
+// Stylizacja dla głównego baneraa
 .main-banner {
   background-image: url('banner.jpg');
   background-size: cover;

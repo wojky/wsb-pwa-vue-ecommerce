@@ -4,7 +4,7 @@
 
 <script>
 // Import the component
-import main from '@/components/Content/main.vue';
+import main from '@/components/mszopa/main.vue';
 
 export default {
   name: 'index',
