@@ -103,6 +103,20 @@ export default {
 .product-section h2 {
   font-size: 2.5em;
   margin-bottom: 30px;
+  /* Dodaj efekt animacji */
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Dodaj animację do tytułu */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .product-list {
@@ -113,12 +127,28 @@ export default {
 
 .product {
   margin: 0 20px 40px;
+  /* Dodaj efekt cieniowania */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+/* Dodaj efekt przy najechaniu kursorem */
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .product img {
   width: 100%;
   max-width: 300px;
   border-radius: 5px;
+  /* Dodaj efekt przy najechaniu kursorem */
+  transition: transform 0.3s ease-out;
+}
+
+/* Dodaj efekt przy najechaniu kursorem na obrazek */
+.product img:hover {
+  transform: scale(1.05);
 }
 
 .product h3 {
@@ -144,15 +174,30 @@ export default {
 }
 
 // Stylizacja dla sekcji z promocjami
+/* Stylizacja dla sekcji z promocjami */
 .promotion-section {
   background-color: #f4f4f4;
   padding: 50px 0;
   text-align: center;
 }
 
+/* Dodaj efekt animacji dla tytułu */
 .promotion-section h2 {
   font-size: 2.5em;
   margin-bottom: 30px;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Dodaj animację do tytułu */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .promotion-list {
@@ -163,12 +208,28 @@ export default {
 
 .promotion {
   margin: 0 20px 40px;
+  /* Dodaj efekt cieniowania */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+/* Dodaj efekt przy najechaniu kursorem */
+.promotion:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .promotion img {
   width: 100%;
   max-width: 300px;
   border-radius: 5px;
+  /* Dodaj efekt przy najechaniu kursorem */
+  transition: transform 0.3s ease-out;
+}
+
+/* Dodaj efekt przy najechaniu kursorem na obrazek */
+.promotion img:hover {
+  transform: scale(1.05);
 }
 
 .promotion h3 {
@@ -192,4 +253,5 @@ export default {
 .promotion .btn:hover {
   background-color: #e0454d;
 }
+
 </style>
